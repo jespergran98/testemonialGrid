@@ -10,7 +10,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 1.5rem;
+  gap: 1.875rem;
   max-width: 1440px;
   padding: 2rem;
   width: 100%;
@@ -19,7 +19,7 @@ body {
 .testimonial {
   border-radius: 0.5rem;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(72, 85, 106, 0.15);
 }
 
 .testimonial:nth-child(1) {
@@ -28,7 +28,7 @@ body {
   grid-row: 1;
   background-image: url('../images/bg-pattern-quotation.svg');
   background-repeat: no-repeat;
-  background-position: top right 80px;
+  background-position: top 0 right 80px;
 }
 
 .testimonial:nth-child(2) {
@@ -70,6 +70,15 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Specific avatar borders */
+.testimonial:nth-child(1) .testimonial-avatar {
+  border-color: var(--purple-300);
+}
+
+.testimonial:nth-child(5) .testimonial-avatar {
+  border-color: var(--purple-500);
+}
+
 .testimonial-info {
   display: flex;
   flex-direction: column;
@@ -103,7 +112,7 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* White testimonial specific styles */
@@ -132,6 +141,7 @@ body {
 .testimonial:nth-child(3) .testimonial-avatar,
 .testimonial:nth-child(4) .testimonial-avatar {
   border-color: var(--grey-500);
+  opacity: 1;
 }
 
 .attribution {
@@ -159,7 +169,7 @@ body {
     grid-template-rows: auto;
     gap: 1.5rem;
     padding: 1.5rem;
-    max-width: 375px;
+    max-width: 100%;
   }
 
   .testimonial:nth-child(1) {
